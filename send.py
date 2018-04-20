@@ -17,7 +17,7 @@ def decodestr(s):
     pass
 
 
-mail_to_list=[decodestr('aW9zLXRlYW1ANTZxcS5jb20=')]
+# mail_to_list=[decodestr('aW9zLXRlYW1ANTZxcS5jb20=')]
 # mail_to_list=[decodestr('aW9zLXRlYW1ANTZxcS5jb20=')]
 to_cc = [decodestr('c2h1YWlwZW5nLndhbmdANTZxcS5jb20=')]
 
@@ -31,10 +31,18 @@ mail_sender_pwd=decodestr("Y2h1dGgtNz83dmVwaGFKZXJl")
 
 
 def send_mail_for_content(content=""):
+        
+    to_self = check_out_put("git config --global jira.user", False, None)
+    if not to_self:
+        print "未检测到JIRA用户名,邮件列表中无法包含自己"
+        to_self = decodestr('c2h1YWlwZW5nLndhbmdANTZxcS5jb20=')
+        pass
+    to_list = list(set([to_self,decodestr('c2h1YWlwZW5nLndhbmdANTZxcS5jb20=')]))
+    
     content = content+config_content()+statistics.data_collect()
     mail_title = user_name()+" (githooks脚本更新成功)"
     mail_content = user_name()+":"+content
-    success = send_mail(mail_to_list,mail_title,mail_content)
+    success = send_mail(to_list,mail_title,mail_content)
     return success
     pass
 
@@ -81,6 +89,7 @@ def send_mail(to_list,title,content,cc_list=to_cc):
     msg['To'] = ";".join(to_list)
     msg['Cc'] = ';'.join(cc_list)
     print "正在发送通知邮件"
+    # print me,to_list,msg.as_string()
     try:
         server = smtplib.SMTP()
         server.connect(mail_host)
@@ -165,6 +174,7 @@ def check_out_put(cammand, can_raise, return_value):
 
 def main():
     # send_mail_for_fail()
+    send_mail_for_content("测试")
     pass
 
 

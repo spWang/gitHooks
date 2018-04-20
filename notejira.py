@@ -23,7 +23,7 @@ GOLBAL_COMMIT_MSG = ""
 '''公开方法'''
 def note_jira_if_need(review_url):
     
-  jira_state = check_out_put("git config githooks.notejira", False, "NO")
+  jira_state = check_out_put("git config githooks.notejira", False, "YES")
   if jira_state == "NO":
     print "未开启填充注释到jira的功能,如需开启请执行git config githooks.notejira \"YES\""
     return
