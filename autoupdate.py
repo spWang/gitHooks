@@ -18,7 +18,7 @@ import send
 from util.colorlog import *
 
 UPDATEDURATION_HOUR = 24 #每隔多少小时更新一次
-TIMEOUT = 30
+TIMEOUT = 20
 GITHOOKSURL = "https://api.github.com/repos/spWang/gitHooks/tags"
 MAX_FALI_COUNT = 0 #检查和更新脚本失败时抛异常的最大次数,0不抛异常
 MIN_ALARM_COUNT = 1 #失败报警的最小次数
@@ -365,8 +365,8 @@ def need_check_update(force_update=False):
 
     currentHour = int(time.strftime('%H',time.localtime(currentTime)))
 
-    if (currentHour<10 or currentHour>20) and not force_update:
-        print "脚本仅在上午10点-晚上20点期间检查是否有新版本;若需要强制检查,执行命令python .git/hooks/upgrade.py"
+    if (currentHour<10 or currentHour>17) and not force_update:
+        print "脚本仅在上午10点-下午5点期间检查是否有新版本;若需要强制检查,执行命令python .git/hooks/upgrade.py"
         return  False
         pass
 
