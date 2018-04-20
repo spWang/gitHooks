@@ -1,0 +1,30 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+import clangformat
+import autoupdate
+import executelimit
+import xcodetemplate
+from util.colorlog import *
+
+def main():
+  
+  executelimit.open_execute_limit()
+  
+  autoupdate.update_if_need()
+  
+  xcodetemplate.move_template_if_need()
+
+  clangformat.format_files()
+
+  pass
+
+if __name__ == '__main__':
+  
+  # logblue("提示:如果出现导入包报错,例如找不到包xxx, ImportError: No module named xxx, 请执行pip install xxx --user安装依赖包,或执行其他命令安装",)
+  
+  print "\n-->git hook脚本pre-commit开始执行"
+  main()
+  print "-->git hook脚本pre-commit执行完毕\n"
+  
+  pass

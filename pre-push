@@ -1,0 +1,25 @@
+#!/usr/bin/env python
+# coding=utf-8
+
+
+import notejira
+import reviewboard
+
+def main():
+
+	review_url = reviewboard.post_review_if_need()
+
+	notejira.note_jira_if_need(review_url)	
+
+	pass
+
+if __name__ == '__main__':
+    
+    print "-->git hook脚本pre-push开始执行"
+    main()
+    print "-->git hook脚本pre-push执行完毕\n"
+    
+    # print "测试环境,正常结束"
+    # exit(-1)
+
+    pass

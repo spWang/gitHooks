@@ -1,0 +1,15 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+
+def main():
+
+
+  pass
+
+if __name__ == '__main__':
+  print "-->git hook脚本update开始执行"
+  main()
+  print "-->git hook脚本update执行完毕\n"
+  
+  pass

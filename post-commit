@@ -1,0 +1,22 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
+
+import statistics
+import CommitMsgStyle
+
+
+def main():
+	
+	statistics.add_all_commit_count()
+	
+	CommitMsgStyle.mark_did_blur_check()
+	
+	pass
+
+if __name__ == '__main__':
+  print "-->git hook脚本post-commit开始执行"
+  main()
+  print "-->git hook脚本post-commit执行完毕\n"
+  
+  pass
