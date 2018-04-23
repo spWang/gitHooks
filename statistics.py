@@ -23,7 +23,7 @@ def data_collect():
     jira_percent = "{:.2f}{}".format(jiras/commits*100,"%")
     review_jira_percent = "{:.2f}{}".format(review_jira/commits*100,"%")
     
-    title = "\n\n数据统计(本统计用来看下使用习惯,并无其他用途)"
+    title = "\n\n统计"
     commit_count_str = "距离上次更新后,本周期本仓库总提交数量:"+str(commits)
     review_count_str = "使用自动review功能的数量:"+str(reviews)+"(占比:"+review_percent+")"
     jira_count_str = "使用填充jira功能的数量:"+str(jiras)+"(占比:"+jira_percent+")"
