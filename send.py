@@ -60,7 +60,7 @@ def send_mail_for_fail(count="0",fail_type="",traceback=""):
     mail_title = user_name()+" (githooks脚本更新失败)"
     version = "当前版本:"+current_version()+"\n"
     global_version = "模板版本:"+current_global_version()+"\n"
-    mail_content = version+user_name()+":"+content
+    mail_content = global_version+version+user_name()+":"+content
     success = send_mail(to_list,mail_title,mail_content)
     return success
     pass
