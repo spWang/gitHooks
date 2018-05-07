@@ -58,7 +58,8 @@ def send_mail_for_fail(count="0",fail_type="",traceback=""):
 
     content = fail_type+"("+"当前失败次数为第"+count+"次)\n"+"最后一次失败回溯:\n"+traceback
     mail_title = user_name()+" (githooks脚本更新失败)"
-    mail_content = user_name()+":"+content
+    version = "当前版本:"+current_version()+"\n"
+    mail_content = version+user_name()+":"+content
     success = send_mail(to_list,mail_title,mail_content)
     return success
     pass
@@ -152,6 +153,10 @@ def clang_format():
     return check_out_put('git config githooks.clangformat', False, "YES")
     pass
 
+def current_version():
+    return check_out_put('git config githooks.version', False, "0")
+    pass
+
 def user_name():
     name = check_out_put('git config user.name', False, "")
     if not len(name):
@@ -174,7 +179,7 @@ def check_out_put(cammand, can_raise, return_value):
 
 def main():
     # send_mail_for_fail()
-    send_mail_for_content("测试")
+    send_mail_for_fail("测试")
     pass
 
 
