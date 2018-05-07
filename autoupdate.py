@@ -80,6 +80,7 @@ def update_if_need(force_update=False):
     if update_success:
         #放于后边的原因是要复制已经获的可执行权限的文件
         copy_code_files_to_template()
+        write_global_version()
         show_change_log()
         pass
     
@@ -113,6 +114,12 @@ def copy_code_files_to_template():
 
     shutil.copytree(hooks_path(),template_hooks_path)
 
+    pass
+
+def write_global_version():
+    command = 'git config --global githooks.globalversion ' + GOLBAL_REMOTE_VERSION
+    check_out_put(command,False,None)
+    print "模板脚本的版本%s已更新录入本地" % GOLBAL_REMOTE_VERSION
     pass
 
 def unzip_path():
