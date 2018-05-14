@@ -80,7 +80,7 @@ class CheckMsgStyle(object):
         logContent = "你的提交信息如下:\n%s" % content
         
         #0.处理合并时有冲突的情况
-        if MERGE_BRANCH_TEXT in content and CONFLICTS_TEXT in content:
+        if MERGE_BRANCH_TEXT in content or CONFLICTS_TEXT in content:
             content = "feat:"+content
             pass
          #1.匹配空行
@@ -124,7 +124,7 @@ class CheckMsgStyle(object):
 
         #4校验subject字数
         #冲突的时候,不校验subject字数
-        if MERGE_BRANCH_TEXT in content and CONFLICTS_TEXT in content:
+        if MERGE_BRANCH_TEXT in content or CONFLICTS_TEXT in content:
             return
             pass
         subjectContent = headerContent.split(':',1)[1]
