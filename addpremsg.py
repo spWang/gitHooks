@@ -20,12 +20,14 @@ def add_subject_if_need():
     if text_contain_blankrow(msg):
         with open(commit_msg_filepath, 'w') as f:
             result = reviewboard.mark_if_need_review(msg)
+            result = result.replace("：",":",1);
             f.write(result)
         return
         pass
 
     with open(commit_msg_filepath, 'w') as f:
         result = reviewboard.mark_if_need_review(msg)
+        result = result.replace("：",":",1);
         if ":" in result:
             result = result+"\n"+"1."+result[result.index(":")+1:] 
             pass
