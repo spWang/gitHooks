@@ -54,7 +54,12 @@ def main():
 def check_dependent_balls():
     print "  正在检查依赖库是否安装"
     pip_list = check_out_put("pip list --format=legacy", False, None)
-    
+
+    if not isinstance(pip_list, str):
+        return
+        pass
+
+
     #异常情况则不检查
     if len(pip_list)>0 and ("pip" not in pip_list):
         return
