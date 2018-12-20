@@ -14,7 +14,7 @@ from CommitMsgStyle import CheckMsgStyle
 from util.colorlog import *
 import base64
 
-JIRA_SERVER_URL = 'aHR0cDovL2ppcmEuNTZxcS5jbi8='
+JIRA_SERVER_URL = 'aHR0cDovL2ppcmEuaGVsbG9iaWtlLmNuLw=='
 
 GOLBAL_JIRA_ID = ""
 GOLBAL_COMMIT_MSG = ""

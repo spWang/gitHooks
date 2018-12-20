@@ -15,15 +15,20 @@
 @implementation ___FILEBASENAMEASIDENTIFIER___
 
 #pragma mark - life cycle
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        
+    }
+    return self;
 }
 
 #pragma mark - actions
 
 #pragma mark - public Method
-
++ (NSString *)reuseIdentifier {
+    return @"ID";
+}
 #pragma mark - private Method
 
 #pragma mark - delegate

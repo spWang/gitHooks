@@ -23,7 +23,9 @@
 #pragma mark - actions
 
 #pragma mark - public Method
-
++ (NSString *)reuseIdentifier {
+    return @"ID";
+}
 #pragma mark - private Method
 
 #pragma mark - delegate
