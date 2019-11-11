@@ -15,7 +15,7 @@ def main():
   
   xcodetemplate.move_template_if_need()
 
-  clangformat.format_files()
+  #clangformat.format_files()
 
   pass
 

@@ -6,7 +6,7 @@ import re
 import subprocess
 import reviewboard
 
-maxSubjectLen = 80
+maxSubjectLen = 380
 typesList = ['feat','fix','docs','style','refactor','test','chore']
 
 MERGE_BRANCH_TEXT = "Merge branch"

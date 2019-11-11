@@ -7,9 +7,9 @@ import reviewboard
 
 def main():
 
-	review_url = reviewboard.post_review_if_need()
+	#review_url = reviewboard.post_review_if_need()
 
-	notejira.note_jira_if_need(review_url)	
+	#notejira.note_jira_if_need(review_url)	
 
 	pass
 

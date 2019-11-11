@@ -8,9 +8,9 @@ import CommitMsgStyle
 
 def main():
 	
-	statistics.add_all_commit_count()
+	#statistics.add_all_commit_count()
 	
-	CommitMsgStyle.mark_did_blur_check()
+	#CommitMsgStyle.mark_did_blur_check()
 	
 	pass
 

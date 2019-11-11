@@ -76,7 +76,7 @@ def reset_add_premsg_state():
     pass
 
 def add_msg_state():
-    return check_out_put('git config githooks.premsg', False, "YES")
+    return check_out_put('git config githooks.premsg', False, "NO")
     pass
 
 '''私有函数'''
