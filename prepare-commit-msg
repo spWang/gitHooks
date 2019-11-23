@@ -7,7 +7,7 @@ from CheckSameImgName import CheckImgName
 
 def main():
 
-	
+	#检查同名图片
 	CheckImgName.check_img_if_need()
 	
 	pass

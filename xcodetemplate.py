@@ -59,7 +59,7 @@ def move_template(old_file_path,new_file_path,write_version):
             pass
     else:
         print "💎💎💎提交被中断,原因是:xcode模板路径无写权限,无法复制xcode模板"
-        print "请打开终端,并cd到当前仓库下,然后执行下边命令\ngit commit -m \"test\"\n此命令会在终端模式下执行脚本,复制写入xcode模板,执行完毕后再尝试你的提交💎💎💎"
+        print "请打开终端,并cd到当前仓库下,然后执行下边命令\ngit commit -m \"123\"\n此命令会在终端模式下执行脚本,复制写入xcode模板,执行完毕后再尝试你的提交💎💎💎"
         exit(-1)
         pass      
     pass

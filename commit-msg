@@ -13,9 +13,11 @@ def main():
 
     CheckMsgStyle.check_msg_if_need()
 
-    addpremsg.add_premsg_if_need()
+    #添加分支名字到最前边
+    #addpremsg.add_premsg_if_need()
 
-    AutoVersion.add_version_if_need()
+    #自动增加版本号
+    #AutoVersion.add_version_if_need()
 
     pass
 
