@@ -29,7 +29,7 @@ def main():
     check_dependent_balls()
 
     #检查用户名和密码
-    check_require_config()
+    #check_require_config()
 
     #创建模板文件夹
     template_path = create_template_dir()
