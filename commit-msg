@@ -11,7 +11,7 @@ def main():
     
     addpremsg.add_subject_if_need()
 
-    CheckMsgStyle.check_msg_if_need()
+    #CheckMsgStyle.check_msg_if_need()
 
     #添加分支名字到最前边
     #addpremsg.add_premsg_if_need()
